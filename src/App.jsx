@@ -44,13 +44,15 @@ function App() {
     carregarAtividades();
   }, []);
 
-  const adicionarAtividade = (nova) => {
-    const novasAtividades = [...atividades, nova]
-      .filter((atividade) => !isNaN(new Date(atividade.data).getTime()))
-      .sort((a, b) => new Date(b.data) - new Date(a.data));
-    setAtividades(novasAtividades);
-    toast.success("Atividade adicionada com sucesso!");
-    setMostrarFormulario(false);
+  const adicionarAtividade = async (novaAtividade) => {
+    try {
+      const response = await axios.post(API_URL, novaAtividade);
+      setAtividades([...atividades, response.data]);
+      toast.success("Atividade adicionada com sucesso!");
+    } catch (error) {
+      console.error("Erro ao salvar atividade:", error.message, error.response ? error.response.data : error);
+      toast.error("Erro ao salvar atividade. Verifique o servidor.");
+    }
   };
 
   const iniciarEdicao = (atividade) => {
