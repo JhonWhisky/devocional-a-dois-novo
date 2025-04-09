@@ -1,0 +1,95 @@
+body {
+  background: #1e1e1e;
+  color: #f0f0f0;
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 20px;
+  background: #2c2c2c;
+  border-radius: 12px;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.3);
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 10px;
+  color: #ffffff;
+}
+
+.versiculo {
+  text-align: center;
+  font-style: italic;
+  margin-bottom: 20px;
+  color: #cccccc;
+}
+
+button {
+  background-color: #3d3d3d;
+  color: #ffffff;
+  padding: 10px 15px;
+  margin: 5px 0;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+button:hover {
+  background-color: #555;
+}
+
+.formulario {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.formulario input,
+.formulario textarea {
+  padding: 8px;
+  border: 1px solid #555;
+  background-color: #1e1e1e;
+  color: #ffffff;
+  border-radius: 6px;
+}
+
+.lista {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.atividade {
+  background: #333;
+  padding: 15px;
+  border-radius: 10px;
+  border-left: 5px solid #888;
+}
+
+.mensagem-vazia {
+  text-align: center;
+  color: #888;
+  font-style: italic;
+}
+
+.atividade button {
+  margin-right: 10px; /* Espaço entre os botões */
+}
+
+.atividade button:nth-child(1) {
+  background-color: #4CAF50; /* Cor para "Fazer Check-in" */
+}
+
+.atividade button:nth-child(2) {
+  background-color: #2196F3; /* Cor para "Editar" */
+}
+
+.atividade button:nth-child(3) {
+  background-color: #f44336; /* Cor para "Remover" */
+}
